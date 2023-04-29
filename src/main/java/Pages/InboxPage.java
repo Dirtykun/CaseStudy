@@ -5,13 +5,14 @@ import org.openqa.selenium.By;
 
 public class InboxPage extends BaseTest {
     public static final String inboxPageUrl = "https://mail.google.com/";
+    public static final String recipient = "gctester51@gmail.com";
+    public static final String subject = "My automated message";
+    public static final String messageBody = "Hello World";
+
     public static final String createBtnXPath = "//div[contains(text(),'Compose')]";
     public static final String recipientsInputXPath = "//input[@role='combobox']";
-    public static final String recipient = "gctester51@gmail.com";
     public static final String subjectInputName = "subjectbox";
-    public static final String subject = "My automated message";
     public static final String messageBodyInputCssSelector = "div[role='textbox']";
-    public static final String messageBody = "Hello World";
     public static final String sendBtnXPath = "//div[text()='Send']";
     public static final String emailPreviewLinkXPath = "//div[@role='link'][";
 

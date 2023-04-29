@@ -10,10 +10,7 @@ public class LoginPage extends BaseTest {
     public static final String passwordInputXPath = "//input[@name='Passwd']";
     public static final String passwordNextBtnXPath = "//div[@id='passwordNext']/div/button";
 
-    public InboxPage handleSignIn() {
-        String login = "gctester51@gmail.com";
-        String password = "P4sSw0rD_51";
-
+    public InboxPage handleSignIn(String login, String password) {
         driver.get(loginPageUrl);
         driver.findElement(By.id(emailAddressInputId)).sendKeys(login);
         driver.findElement(By.xpath(identifierNextBtnXPath)).click();
