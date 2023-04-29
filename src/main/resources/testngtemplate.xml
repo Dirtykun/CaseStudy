@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Case Study">
+    <parameter name="login" value="mail@gmail.com"/>
+    <parameter name="password" value="password"/>
+    <test name="Gmail Test">
+        <classes>
+            <class name="Tests.InboxTest">
+                <methods>
+                    <include name="sendingMessageFlowVerification"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
