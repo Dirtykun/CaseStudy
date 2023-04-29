@@ -11,6 +11,8 @@ public class InboxTest extends BaseTest {
 
         loginPage.handleSignIn()
                 .handleSendingMessage()
-                .openEmail(1);
+                .openEmail(1)
+                .subjectVerification()
+                .emailBodyVerification();
     }
 }

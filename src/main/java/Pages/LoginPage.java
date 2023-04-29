@@ -10,7 +10,7 @@ public class LoginPage extends BaseTest {
     public static final String passwordInputXPath = "//input[@name='Passwd']";
     public static final String passwordNextBtnXPath = "//div[@id='passwordNext']/div/button";
 
-    public static InboxPage handleSignIn() {
+    public InboxPage handleSignIn() {
         String login = "gctester51@gmail.com";
         String password = "P4sSw0rD_51";
 
