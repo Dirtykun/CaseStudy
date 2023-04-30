@@ -15,22 +15,20 @@ public class InboxPage extends BaseTest {
     public static final String sendBtnXPath = "//div[text()='Send']";
     public static final String emailPreviewLinkXPath = "//div[@role='link'][";
 
-    public InboxPage handleSendingMessage() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+    public InboxPage handleSendingMessage() throws InterruptedException {
+        Thread.sleep(5000);//5s wait for Inbox to load all elements
         driver.findElement(By.xpath(createBtnXPath)).click();
         driver.findElement(By.xpath(recipientsInputXPath)).click();
         driver.findElement(By.xpath(recipientsInputXPath)).sendKeys(recipient);
         driver.findElement(By.name(subjectInputName)).sendKeys(subject);
         driver.findElement(By.cssSelector(messageBodyInputCssSelector)).sendKeys(messageBody);
+        Thread.sleep(1000);//1s wait for all fields to be filled before sending the message
         driver.findElement(By.xpath(sendBtnXPath)).click();
         return this;
     }
 
-    public EmailPreviewPage openEmail(int linkIndex) {
+    public EmailPreviewPage openEmail(int linkIndex) throws InterruptedException {
+        Thread.sleep(2000);//2s wait for sent email to show up in the Inbox
         driver.findElement(By.xpath(emailPreviewLinkXPath + linkIndex + "]")).click();
         return new EmailPreviewPage();
     }

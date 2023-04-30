@@ -8,7 +8,7 @@ public class InboxTest extends BaseTest {
 
     @Test
     @Parameters({"login", "password"})
-    public void sendingMessageFlowVerification(String login, String password) {
+    public void sendingMessageFlowVerification(String login, String password) throws InterruptedException {
         LoginPage loginPage = new LoginPage();
 
         loginPage.handleSignIn(login, password)
