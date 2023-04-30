@@ -4,7 +4,6 @@ import Tests.BaseTest;
 import org.openqa.selenium.By;
 
 public class InboxPage extends BaseTest {
-    public static final String inboxPageUrl = "https://mail.google.com/";
     public static final String recipient = "gctester51@gmail.com";
     public static final String subject = "My automated message";
     public static final String messageBody = "Hello World";

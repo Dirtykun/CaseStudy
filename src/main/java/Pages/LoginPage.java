@@ -4,7 +4,7 @@ import Tests.BaseTest;
 import org.openqa.selenium.By;
 
 public class LoginPage extends BaseTest {
-    public static final String loginPageUrl = "https://accounts.google.com/signin";
+    public static final String loginPageUrl = "https://mail.google.com/";
     public static final String emailAddressInputId = "identifierId";
     public static final String identifierNextBtnXPath = "//div[@id='identifierNext']/div/button";
     public static final String passwordInputXPath = "//input[@name='Passwd']";
@@ -16,7 +16,6 @@ public class LoginPage extends BaseTest {
         driver.findElement(By.xpath(identifierNextBtnXPath)).click();
         driver.findElement(By.xpath(passwordInputXPath)).sendKeys(password);
         driver.findElement(By.xpath(passwordNextBtnXPath)).click();
-        driver.navigate().to(InboxPage.inboxPageUrl);
         return new InboxPage();
     }
 }
