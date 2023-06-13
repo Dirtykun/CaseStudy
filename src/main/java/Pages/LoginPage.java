@@ -4,11 +4,11 @@ import Tests.BaseTest;
 import org.openqa.selenium.By;
 
 public class LoginPage extends BaseTest {
-    public static final String loginPageUrl = "https://mail.google.com/";
-    public static final String emailAddressInputId = "identifierId";
-    public static final String identifierNextBtnXPath = "//div[@id='identifierNext']/div/button";
-    public static final String passwordInputXPath = "//input[@name='Passwd']";
-    public static final String passwordNextBtnXPath = "//div[@id='passwordNext']/div/button";
+    public final String loginPageUrl = "https://mail.google.com/";
+    public final String emailAddressInputId = "identifierId";
+    public final String identifierNextBtnXPath = "//div[@id='identifierNext']/div/button";
+    public final String passwordInputXPath = "//input[@name='Passwd']";
+    public final String passwordNextBtnXPath = "//div[@id='passwordNext']/div/button";
 
     public InboxPage handleSignIn(String login, String password) {
         driver.get(loginPageUrl);

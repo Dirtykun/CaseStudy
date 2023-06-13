@@ -8,12 +8,12 @@ public class InboxPage extends BaseTest {
     public static final String subject = "My automated message";
     public static final String messageBody = "Hello World";
 
-    public static final String createBtnXPath = "//div[contains(text(),'Compose')]";
-    public static final String recipientsInputXPath = "//input[@role='combobox']";
-    public static final String subjectInputName = "subjectbox";
-    public static final String messageBodyInputCssSelector = "div[role='textbox']";
-    public static final String sendBtnXPath = "//div[text()='Send']";
-    public static final String emailPreviewLinkXPath = "//div[@role='link'][";
+    public final String createBtnXPath = "//div[contains(text(),'Compose')]";
+    public final String recipientsInputXPath = "//input[@role='combobox']";
+    public final String subjectInputName = "subjectbox";
+    public final String messageBodyInputCssSelector = "div[role='textbox']";
+    public final String sendBtnXPath = "//div[text()='Send']";
+    public final String emailPreviewLinkXPath = "//div[@role='link'][";
 
     public InboxPage handleSendingMessage() throws InterruptedException {
         Thread.sleep(5000);//5s wait for Inbox to load all elements
